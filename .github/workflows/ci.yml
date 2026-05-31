@@ -7,6 +7,6 @@ jobs:
   setup-test:
     runs-on: ubuntu-latest
 
-  steps:
-    -name: Display Message
-      run: echo "GitHub Actions configured successfully!!"
+    steps:
+      - name: Display Message
+        run: echo "GitHub Actions configured successfully!!"
