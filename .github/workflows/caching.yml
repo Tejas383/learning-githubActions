@@ -1,0 +1,21 @@
+name: Caching
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup nodeJS
+        uses: actions/setup-node@v4
+
+      - name: Install depenedencies
+        run: npm run install
+
+      - name: Build project
+        run: npm run build
