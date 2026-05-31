@@ -13,9 +13,12 @@ jobs:
 
       - name: Setup nodeJS
         uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: npm
 
       - name: Install depenedencies
-        run: npm run install
+        run: npm install
 
       - name: Build project
         run: npm run build
