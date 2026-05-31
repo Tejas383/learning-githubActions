@@ -20,4 +20,4 @@ jobs:
         run: python --version
 
       - name: Run python command
-        run: python -c "print("hello from python :))")"
+        run: python -c "print(\"hello from python :))\")"
