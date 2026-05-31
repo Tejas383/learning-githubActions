@@ -1,0 +1,14 @@
+name: Runner Security
+
+on:
+  workflow_dispatch:
+
+jobs:
+  security-demo:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+
+    steps:
+      - run: echo "runner security configured"
