@@ -1,0 +1,23 @@
+name: Python Setup
+
+on:
+  workflow_dispatch:
+
+jobs:
+  python-demo:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install Python
+        uses: actions/python-setup@v5
+        with:
+          python-version: "3.12"
+
+      - name: Verify python Installation
+        run: python --version
+
+      - name: Run python command
+        run: python -c "print("hello from python :))")"
