@@ -1,0 +1,20 @@
+name: Self Hosted Runner
+
+on:
+  workflow_dispatch:
+
+jobs:
+  hosted-runner:
+    runs-on: self-hosted
+
+    steps:
+      - name: Display Message
+        run: echo "Running on Self Hosted Runner"
+      - name: Show current user
+        run: whoami
+      - name: Show OS
+        run: uname -a
+      - name: Show Working Directory
+        run: pwd
+      - name: Display date
+        run: date
