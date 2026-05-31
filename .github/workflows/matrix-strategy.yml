@@ -7,7 +7,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    strtegy:
+    strategy:
       matrix:
         node-version: [16, 18, 20]
 
