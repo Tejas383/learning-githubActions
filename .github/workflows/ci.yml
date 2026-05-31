@@ -9,4 +9,4 @@ jobs:
 
   steps:
     -name: Display Message
-    run: echo "GitHub Actions configured successfully!!"
+      run: echo "GitHub Actions configured successfully!!"
