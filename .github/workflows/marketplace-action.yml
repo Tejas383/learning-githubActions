@@ -1,0 +1,16 @@
+name: Marketplace Actions
+
+on:
+  workflow_dispatch:
+
+jobs:
+  demo:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Display files
+        run: ls -la
+      - name: Display Message
+        run: echo "Marketplace Actions executed"
