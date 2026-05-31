@@ -1,0 +1,37 @@
+name: Artifact Download
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Create file
+        run: |
+          mkdir output
+          echo "hello from artifact upload" > output/report.txt
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-artifact
+          path: output/
+
+  download:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: download file
+        uses: actions/download-artifact@v4
+        with:
+          name: build-artifact
+
+      - name: verify file
+        run: |
+          ls -R
+          cat output/report.txt
