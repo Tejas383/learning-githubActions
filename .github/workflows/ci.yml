@@ -1,0 +1,12 @@
+name: GitHub Actions Setup
+
+on:
+  push:
+
+jobs:
+  setup-test:
+    runs-on: ubuntu-latest
+
+  steps:
+    -name: Display Message
+    run: echo "GitHub Actions configured successfully!!"
