@@ -1,0 +1,24 @@
+name: Matrix Strategy
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strtegy:
+      matrix:
+        node-version: [16, 18, 20]
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup nodeJS
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{matrix.node-version}}
+
+      - name: Print node version
+        run: node -v
