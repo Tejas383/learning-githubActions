@@ -1,0 +1,16 @@
+name: Basic Workflow
+
+on:
+  push:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+  steps:
+    - name: Print Message
+      run: echo "Hellooooooo"
+    - name: Show Date
+      run: date
+    - name: Present Working Directory
+      run: pwd
